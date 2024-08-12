@@ -1,8 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_app/bloc/weather_bloc_bloc.dart';
@@ -66,7 +65,8 @@ class _home_ScreenState extends State<home_Screen> {
                   height: 300,
                   width: 300,
                   decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.deepPurple),
+                      shape: BoxShape.circle,
+                      color: Color.fromARGB(1000, 45, 171, 227)),
                 ),
               ),
               Align(
@@ -74,14 +74,14 @@ class _home_ScreenState extends State<home_Screen> {
                   child: Container(
                     height: 300,
                     width: 600,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xffffAB40),
                     ),
                   )),
               BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 100.0, sigmaY: 100.0),
                 child: Container(
-                  decoration: BoxDecoration(color: Colors.transparent),
+                  decoration: const BoxDecoration(color: Colors.transparent),
                 ),
               ),
               BlocBuilder<WeatherBlocBloc, WeatherBlocState>(
